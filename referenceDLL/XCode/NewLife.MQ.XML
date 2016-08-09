@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NewLife.MQ</name>
+    </assembly>
+    <members>
+        <member name="T:NewLife.MessageQueue.Message">
+            <summary></summary>
+        </member>
+        <member name="T:NewLife.MessageQueue.MQTest">
+            <summary>测试用例</summary>
+        </member>
+        <member name="M:NewLife.MessageQueue.MQTest.TestBase">
+            <summary>基础测试</summary>
+        </member>
+        <member name="T:NewLife.MessageQueue.MQClient">
+            <summary>MQ客户端</summary>
+        </member>
+        <member name="M:NewLife.MessageQueue.MQClient.#ctor">
+            <summary>实例化</summary>
+        </member>
+        <member name="M:NewLife.MessageQueue.MQClient.Public(System.String)">
+            <summary>发布主题</summary>
+            <param name="topic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.MessageQueue.MQClient.Subscribe(System.String)">
+            <summary>订阅主题</summary>
+            <param name="topic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.MessageQueue.MQClient.Send(System.String,System.Object)">
+            <summary>发布消息</summary>
+            <param name="topic"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="P:NewLife.MessageQueue.MQClient.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:NewLife.MessageQueue.MQClient.Remote">
+            <summary>远程地址</summary>
+        </member>
+        <member name="P:NewLife.MessageQueue.MQClient.Client">
+            <summary>网络客户端</summary>
+        </member>
+        <member name="T:NewLife.MessageQueue.MQServer">
+            <summary>MQ服务器</summary>
+        </member>
+        <member name="M:NewLife.MessageQueue.MQServer.#ctor">
+            <summary>实例化</summary>
+        </member>
+        <member name="T:NewLife.MessageQueue.MQSession">
+            <summary>MQ会话</summary>
+        </member>
+        <member name="P:NewLife.MessageQueue.MQSession.Name">
+            <summary>名称</summary>
+        </member>
+        <member name="P:NewLife.MessageQueue.MQSession.Topic">
+            <summary>发布或订阅的主题。暂时没想好怎么做发布多主题或者订阅多主题</summary>
+        </member>
+        <member name="T:NewLife.MessageQueue.Topic">
+            <summary>主题</summary>
+        </member>
+    </members>
+</doc>

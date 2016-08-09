@@ -1,0 +1,11 @@
+E:\廖祝杰\XTool\XTool.File\bin\Debug\XTool.File.dll
+E:\廖祝杰\XTool\XTool.File\bin\Debug\XTool.File.pdb
+E:\廖祝杰\XTool\XTool.File\obj\Debug\XTool.File.csprojResolveAssemblyReference.cache
+E:\廖祝杰\XTool\XTool.File\obj\Debug\XTool.File.dll
+E:\廖祝杰\XTool\XTool.File\obj\Debug\XTool.File.pdb
+E:\廖祝杰\XTool\XTool.File\bin\Debug\NPOI.dll
+E:\廖祝杰\XTool\XTool.File\bin\Debug\NPOI.OOXML.dll
+E:\廖祝杰\XTool\XTool.File\bin\Debug\NPOI.OpenXml4Net.dll
+E:\廖祝杰\XTool\XTool.File\bin\Debug\NPOI.OpenXmlFormats.dll
+E:\廖祝杰\XTool\XTool.File\bin\Debug\XTool.Constant.dll
+E:\廖祝杰\XTool\XTool.File\bin\Debug\XTool.Constant.pdb

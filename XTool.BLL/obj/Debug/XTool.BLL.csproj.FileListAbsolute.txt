@@ -1,0 +1,11 @@
+E:\廖祝杰\XTool\XTool.BLL\bin\Debug\XTool.BLL.dll
+E:\廖祝杰\XTool\XTool.BLL\bin\Debug\XTool.BLL.pdb
+E:\廖祝杰\XTool\XTool.BLL\bin\Debug\NewLife.Core.dll
+E:\廖祝杰\XTool\XTool.BLL\bin\Debug\XCode.dll
+E:\廖祝杰\XTool\XTool.BLL\bin\Debug\NewLife.Core.pdb
+E:\廖祝杰\XTool\XTool.BLL\bin\Debug\NewLife.Core.xml
+E:\廖祝杰\XTool\XTool.BLL\bin\Debug\XCode.pdb
+E:\廖祝杰\XTool\XTool.BLL\bin\Debug\XCode.xml
+E:\廖祝杰\XTool\XTool.BLL\obj\Debug\XTool.BLL.dll
+E:\廖祝杰\XTool\XTool.BLL\obj\Debug\XTool.BLL.pdb
+E:\廖祝杰\XTool\XTool.BLL\obj\Debug\XTool.BLL.csprojResolveAssemblyReference.cache

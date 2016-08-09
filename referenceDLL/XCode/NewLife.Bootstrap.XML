@@ -1,0 +1,1765 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NewLife.Bootstrap</name>
+    </assembly>
+    <members>
+        <member name="T:NewLife.Bootstrap.BootstrapJs">
+            <summary>Bootstrap脚本提供者</summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.BootstrapJs.OnAlert(System.String)">
+            <summary>重载Alert实现</summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionContentHeaderPanel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.AccordionContentHeaderPanel"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionContentHeaderPanel.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionContentHeaderPanel.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionContentHeaderPanel.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionContentHeaderPanel.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionContentHeaderPanel.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionContentHeaderPanel.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionContentPanel.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionContentPanel.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionContentPanel.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionContentPanel.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionContentPanel.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionContentPanel.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionControl.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.TabControl"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionControl.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionControl.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionControl.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionControl.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.AccordionControl.AccordionPanes">
+            <summary>
+            Gets the tab pages.
+            </summary>
+            <value>
+            The tab pages.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.AccordionControl.Controls">
+            <summary>
+            Gets a <see cref="T:System.Web.UI.ControlCollection" /> object that represents the child controls for a specified server control in the UI hierarchy.
+            </summary>
+            <returns>
+            The collection of child controls for the specified server control.
+              </returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPane.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.AccordionPane"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPane.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPane.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPane.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPane.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPane.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPane.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPane.CreateChildControls">
+            <summary>
+            Called by the ASP.NET page framework to notify server controls that use composition-based implementation to create any child controls they contain in preparation for posting back or rendering.
+            </summary>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.AccordionPane.Header">
+            <summary>
+            Gets or sets the header.
+            </summary>
+            <value>
+            The header.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.AccordionPane.Content">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>
+            The content.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPaneCollection.#ctor(System.Web.UI.Control)">
+            <summary>
+            Initializes a new instance of the <see cref="!:AccordianCollection"/> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPaneCollection.Add(NewLife.Bootstrap.Controls.AccordionPane)">
+            <summary>
+            Adds the specified tab.
+            </summary>
+            <param name="Tab">The tab.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPaneCollection.Insert(System.Int32,NewLife.Bootstrap.Controls.TabPage)">
+            <summary>
+            Inserts the specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPaneCollection.Remove(NewLife.Bootstrap.Controls.AccordionPane)">
+            <summary>
+            Removes the specified tab.
+            </summary>
+            <param name="Tab">The tab.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPaneCollection.Contains(NewLife.Bootstrap.Controls.AccordionPane)">
+            <summary>
+            Determines whether [contains] [the specified tab].
+            </summary>
+            <param name="Tab">The tab.</param>
+            <returns>
+              <c>true</c> if [contains] [the specified tab]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPaneCollection.IndexOf(NewLife.Bootstrap.Controls.AccordionPane)">
+            <summary>
+            Indexes the of.
+            </summary>
+            <param name="item">The item.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.AccordionPaneCollection.CopyTo(NewLife.Bootstrap.Controls.AccordionPane[],System.Int32)">
+            <summary>
+            Copies to.
+            </summary>
+            <param name="array">The array.</param>
+            <param name="index">The index.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.AccordionPaneCollection.Item(System.Int32)">
+            <summary>
+            Indexer property for the collection that returns and sets an item
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Alert.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Alert.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.Alert"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Alert.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Alert.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Alert.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Alert.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Alert.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Alert.CreateChildControls">
+            <summary>
+            Called by the ASP.NET page framework to notify server controls that use composition-based implementation to create any child controls they contain in preparation for posting back or rendering.
+            </summary>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Alert.AlertType">
+            <summary>
+            Gets or sets the type of the alert.
+            </summary>
+            <value>
+            The type of the alert.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Alert.Content">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>
+            The content.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Badge.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Badge.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.Badge"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Badge.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Badge.Label">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:NewLife.Bootstrap.Controls.Badge"/> is label.
+            </summary>
+            <value>
+              <c>true</c> if label; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Badge.LabelType">
+            <summary>
+            Gets or sets the type of the label.
+            </summary>
+            <value>
+            The type of the label.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.BoundColumn.Header">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:NewLife.Bootstrap.Controls.TabPage"/> is enabled.
+            </summary>
+            <value>
+              <c>true</c> if enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.BoundColumn.FieldName">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.BoundColumn.Width">
+            <summary>
+            Gets or sets the width.
+            </summary>
+            <value>
+            The width.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Breadcrumbs.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Breadcrumbs.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.Breadcrumbs"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Breadcrumbs.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Breadcrumbs.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Breadcrumbs.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Breadcrumbs.AddParsedSubObject(System.Object)">
+            <summary>
+            Notifies the server control that an element, either XML or HTML, was parsed, and adds the element to the server control's <see cref="T:System.Web.UI.ControlCollection" /> object.
+            </summary>
+            <param name="obj">An <see cref="T:System.Object" /> that represents the parsed element.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Breadcrumbs.Items">
+            <summary>
+            Gets the items.
+            </summary>
+            <value>
+            The items.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Breadcrumbs.Controls">
+            <summary>
+            Gets a <see cref="T:System.Web.UI.ControlCollection" /> object that represents the child controls for a specified server control in the UI hierarchy.
+            </summary>
+            <returns>
+            The collection of child controls for the specified server control.
+              </returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Button.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Button.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.Button"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Button.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Button.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Button.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Button.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Button.CreateChildControls">
+            <summary>
+            Called by the ASP.NET page framework to notify server controls that use composition-based implementation to create any child controls they contain in preparation for posting back or rendering.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Button.GetCssButtonType">
+            <summary>
+            Gets the type of the CSS button.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Button.Menu">
+            <summary>
+            Gets or sets the footer.
+            </summary>
+            <value>
+            The footer.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Button.Block">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:NewLife.Bootstrap.Controls.Button"/> is block.
+            </summary>
+            <value>
+              <c>true</c> if block; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Button.ButtonType">
+            <summary>
+            Gets or sets the type of the button.
+            </summary>
+            <value>
+            The type of the button.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Button.ButtonSize">
+            <summary>
+            Gets or sets the size of the button.
+            </summary>
+            <value>
+            The size of the button.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ButtonGroup.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ButtonGroup.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ButtonGroup.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ButtonGroup.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ButtonGroup.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ButtonGroup.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ButtonGroup.CreateChildControls">
+            <summary>
+            Called by the ASP.NET page framework to notify server controls that use composition-based implementation to create any child controls they contain in preparation for posting back or rendering.
+            </summary>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.ButtonGroup.Buttons">
+            <summary>
+            Gets or sets the buttons.
+            </summary>
+            <value>
+            The buttons.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.DateColumn.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.DateColumn"/> class.
+            </summary>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.DateColumn.DateFormatString">
+            <summary>
+            Gets or sets the date format string.
+            </summary>
+            <value>
+            The date format string.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.DropdownMenu.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.DropdownMenu"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.DropdownMenu.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.DropdownMenu.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Writes the <see cref="T:System.Web.UI.WebControls.BulletedList" /> control content to the specified <see cref="T:System.Web.UI.HtmlTextWriter" /> object for display on the client.
+            </summary>
+            <param name="writer">An <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.DropdownMenu.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the list items of a <see cref="T:System.Web.UI.WebControls.BulletedList" /> control as bullets into the specified <see cref="T:System.Web.UI.HtmlTextWriter" />.
+            </summary>
+            <param name="writer">An <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.DropdownMenu.RightToLeft">
+            <summary>
+            Gets or sets the type of the alert.
+            </summary>
+            <value>
+            The type of the alert.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.FieldSet.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.FieldSet"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.FieldSet.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.FieldSet.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.FieldSet.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.FieldSet.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.FieldSet.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.FieldSet.CreateChildControls">
+            <summary>
+            Called by the ASP.NET page framework to notify server controls that use composition-based implementation to create any child controls they contain in preparation for posting back or rendering.
+            </summary>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.FieldSet.Content">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>
+            The content.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.FieldSet.Legend">
+            <summary>
+            Gets or sets the legend.
+            </summary>
+            <value>
+            The legend.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Heading.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Heading.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Heading.H">
+            <summary>
+            Gets or sets the H.
+            </summary>
+            <value>
+            The H.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Hero.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Hero.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Hero.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Hero.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Hero.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Hero.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Hero.CreateChildControls">
+            <summary>
+            Called by the ASP.NET page framework to notify server controls that use composition-based implementation to create any child controls they contain in preparation for posting back or rendering.
+            </summary>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Hero.Header">
+            <summary>
+            Gets or sets the header.
+            </summary>
+            <value>
+            The header.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Hero.Content">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>
+            The content.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.HyperlinkColumn.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.HyperlinkColumn"/> class.
+            </summary>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.HyperlinkColumn.NavigationUrlFormatString">
+            <summary>
+            Gets or sets the navigation URL format string.
+            </summary>
+            <value>
+            The navigation URL format string.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.HyperlinkColumn.NavigationUrlField">
+            <summary>
+            Gets or sets the navigation URL field.
+            </summary>
+            <value>
+            The navigation URL field.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.HyperlinkColumn.Target">
+            <summary>
+            Gets or sets the target.
+            </summary>
+            <value>
+            The target.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Image.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Image.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.Image"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Image.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Image.ImageType">
+            <summary>
+            Gets or sets the type of the image.
+            </summary>
+            <value>
+            The type of the image.
+            </value>
+        </member>
+        <member name="T:NewLife.Bootstrap.Controls.ListItem">
+            <summary>
+            The individual TabPage class that holds the intermediary Tab page values
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ListItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.ListItem"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ListItem.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Sends server control content to a provided <see cref="T:System.Web.UI.HtmlTextWriter" /> object, which writes the content to be rendered on the client.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the server control content.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.ListItem.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>
+            The text.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.ListItem.NavigateUrl">
+            <summary>
+            Gets or sets the navigate URL.
+            </summary>
+            <value>
+            The navigate URL.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.ListItem.Enabled">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:NewLife.Bootstrap.Controls.ListItem"/> is enabled.
+            </summary>
+            <value>
+              <c>true</c> if enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.ListItem.Divider">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:NewLife.Bootstrap.Controls.ListItem"/> is divider.
+            </summary>
+            <value>
+              <c>true</c> if divider; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.ListItem.Active">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:NewLife.Bootstrap.Controls.ListItem"/> is active.
+            </summary>
+            <value>
+              <c>true</c> if active; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ListItemCollection.#ctor(System.Web.UI.Control)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.ListItemCollection"/> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ListItemCollection.Add(NewLife.Bootstrap.Controls.ListItem)">
+            <summary>
+            Adds the specified item.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ListItemCollection.Insert(System.Int32,NewLife.Bootstrap.Controls.ListItem)">
+            <summary>
+            Inserts the specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ListItemCollection.Remove(NewLife.Bootstrap.Controls.ListItem)">
+            <summary>
+            Removes the specified item.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ListItemCollection.Contains(NewLife.Bootstrap.Controls.ListItem)">
+            <summary>
+            Determines whether [contains] [the specified item].
+            </summary>
+            <param name="item">The item.</param>
+            <returns>
+              <c>true</c> if [contains] [the specified item]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ListItemCollection.IndexOf(NewLife.Bootstrap.Controls.ListItem)">
+            <summary>
+            Indexes the of.
+            </summary>
+            <param name="item">The item.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ListItemCollection.CopyTo(NewLife.Bootstrap.Controls.ListItem[],System.Int32)">
+            <summary>
+            Copies to.
+            </summary>
+            <param name="array">The array.</param>
+            <param name="index">The index.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.ListItemCollection.Item(System.Int32)">
+            <summary>
+            Indexer property for the collection that returns and sets an item
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.MediaObject.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.MediaObject.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.MediaObject"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.MediaObject.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.MediaObject.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.MediaObject.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.MediaObject.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.MediaObject.RenderImage(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the image.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.MediaObject.RenderTitle(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the title.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.MediaObject.RenderDescription(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the description.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.MediaObject.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.MediaObject.CreateChildControls">
+            <summary>
+            Called by the ASP.NET page framework to notify server controls that use composition-based implementation to create any child controls they contain in preparation for posting back or rendering.
+            </summary>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.MediaObject.Inner">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>
+            The content.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.MediaObject.ImageAlign">
+            <summary>
+            Gets or sets the image align.
+            </summary>
+            <value>
+            The image align.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.MediaObject.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.MediaObject.Description">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.MediaObject.ImageUrl">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavBar.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavBar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.NavBar"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavBar.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavBar.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavBar.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavBar.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavBar.RenderTitle(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the title.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavBar.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavBar.CreateChildControls">
+            <summary>
+            Called by the ASP.NET page framework to notify server controls that use composition-based implementation to create any child controls they contain in preparation for posting back or rendering.
+            </summary>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.NavBar.Content">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>
+            The content.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.NavBar.Position">
+            <summary>
+            Gets or sets the position.
+            </summary>
+            <value>
+            The position.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.NavBar.Inverted">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:NewLife.Bootstrap.Controls.NavBar"/> is inverted.
+            </summary>
+            <value>
+              <c>true</c> if inverted; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.NavBar.Fixed">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:NewLife.Bootstrap.Controls.NavBar"/> is fixed.
+            </summary>
+            <value>
+              <c>true</c> if fixed; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.NavBar.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavList.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavList.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.NavList"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavList.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavList.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavList.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Sends server control content to a provided <see cref="T:System.Web.UI.HtmlTextWriter" /> object, which writes the content to be rendered on the client.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the server control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavList.AddParsedSubObject(System.Object)">
+            <summary>
+            Notifies the server control that an element, either XML or HTML, was parsed, and adds the element to the server control's <see cref="T:System.Web.UI.ControlCollection" /> object.
+            </summary>
+            <param name="obj">An <see cref="T:System.Object" /> that represents the parsed element.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.NavList.Items">
+            <summary>
+            Gets the items.
+            </summary>
+            <value>
+            The items.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.NavList.Controls">
+            <summary>
+            Gets a <see cref="T:System.Web.UI.ControlCollection" /> object that represents the child controls for a specified server control in the UI hierarchy.
+            </summary>
+            <returns>
+            The collection of child controls for the specified server control.
+              </returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavListCollection.#ctor(System.Web.UI.Control)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.TabCollection"/> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavListCollection.Add(NewLife.Bootstrap.Controls.NavListItem)">
+            <summary>
+            Adds the specified tab.
+            </summary>
+            <param name="Tab">The tab.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavListCollection.Insert(System.Int32,NewLife.Bootstrap.Controls.NavListItem)">
+            <summary>
+            Inserts the specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavListCollection.Remove(NewLife.Bootstrap.Controls.NavListItem)">
+            <summary>
+            Removes the specified tab.
+            </summary>
+            <param name="Tab">The tab.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavListCollection.Contains(NewLife.Bootstrap.Controls.NavListItem)">
+            <summary>
+            Determines whether [contains] [the specified tab].
+            </summary>
+            <param name="Tab">The tab.</param>
+            <returns>
+              <c>true</c> if [contains] [the specified tab]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavListCollection.IndexOf(NewLife.Bootstrap.Controls.NavListItem)">
+            <summary>
+            Indexes the of.
+            </summary>
+            <param name="item">The item.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavListCollection.CopyTo(NewLife.Bootstrap.Controls.NavListItem[],System.Int32)">
+            <summary>
+            Copies to.
+            </summary>
+            <param name="array">The array.</param>
+            <param name="index">The index.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.NavListCollection.Item(System.Int32)">
+            <summary>
+            Indexer property for the collection that returns and sets an item
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavListItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.NavListItem"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.NavListItem.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Sends server control content to a provided <see cref="T:System.Web.UI.HtmlTextWriter" /> object, which writes the content to be rendered on the client.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the server control content.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.NavListItem.Header">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:NewLife.Bootstrap.Controls.NavListItem"/> is header.
+            </summary>
+            <value>
+              <c>true</c> if header; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.NavListItem.Divider">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:NewLife.Bootstrap.Controls.NavListItem"/> is divider.
+            </summary>
+            <value>
+              <c>true</c> if divider; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.NavListItem.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>
+            The text.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.NavListItem.NavigateUrl">
+            <summary>
+            Gets or sets the navigate URL.
+            </summary>
+            <value>
+            The navigate URL.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.NavListItem.Enabled">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:NewLife.Bootstrap.Controls.ListItem"/> is enabled.
+            </summary>
+            <value>
+              <c>true</c> if enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.PageHeader.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.PageHeader.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.PageHeader.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.PageHeader.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.PageHeader.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.PageHeader.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.PageHeader.SubTitle">
+            <summary>
+            Gets or sets the sub title.
+            </summary>
+            <value>
+            The sub title.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Paginator.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Paginator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.Paginator"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Paginator.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Paginator.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Paginator.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Paginator.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Paginator.GetTotalPages">
+            <summary>
+            Gets the total pages.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Paginator.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Paginator.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            When implemented by a class, processes postback data for an ASP.NET server control.
+            </summary>
+            <param name="postDataKey">The key identifier for the control.</param>
+            <param name="postCollection">The collection of all incoming name values.</param>
+            <returns>
+            true if the server control's state changes as a result of the postback; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Paginator.RaisePostDataChangedEvent">
+            <summary>
+            When implemented by a class, signals the server control to notify the ASP.NET application that the state of the control has changed.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Paginator.OnPageIndexChanged">
+            <summary>
+            Called when [page index changed].
+            </summary>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Paginator.PageSize">
+            <summary>
+            Gets or sets the size of the page.
+            </summary>
+            <value>
+            The size of the page.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ProgressBar.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ProgressBar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.ProgressBar"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ProgressBar.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ProgressBar.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ProgressBar.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.ProgressBar.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.ProgressBar.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.ProgressBar.ProgressBarStyle">
+            <summary>
+            Gets or sets the progress bar style.
+            </summary>
+            <value>
+            The progress bar style.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.ProgressBar.Striped">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:NewLife.Bootstrap.Controls.ProgressBar"/> is striped.
+            </summary>
+            <value>
+              <c>true</c> if striped; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabCollection.#ctor(System.Web.UI.Control)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.TabCollection"/> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabCollection.Add(NewLife.Bootstrap.Controls.TabPage)">
+            <summary>
+            Adds the specified tab.
+            </summary>
+            <param name="Tab">The tab.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabCollection.Insert(System.Int32,NewLife.Bootstrap.Controls.TabPage)">
+            <summary>
+            Inserts the specified index.
+            </summary>
+            <param name="index">The index.</param>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabCollection.Remove(NewLife.Bootstrap.Controls.TabPage)">
+            <summary>
+            Removes the specified tab.
+            </summary>
+            <param name="Tab">The tab.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabCollection.Contains(NewLife.Bootstrap.Controls.TabPage)">
+            <summary>
+            Determines whether [contains] [the specified tab].
+            </summary>
+            <param name="Tab">The tab.</param>
+            <returns>
+              <c>true</c> if [contains] [the specified tab]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabCollection.IndexOf(NewLife.Bootstrap.Controls.TabPage)">
+            <summary>
+            Indexes the of.
+            </summary>
+            <param name="item">The item.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabCollection.CopyTo(NewLife.Bootstrap.Controls.TabPage[],System.Int32)">
+            <summary>
+            Copies to.
+            </summary>
+            <param name="array">The array.</param>
+            <param name="index">The index.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.TabCollection.Item(System.Int32)">
+            <summary>
+            Indexer property for the collection that returns and sets an item
+            </summary>
+            <param name="index">The index.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabControl.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.TabControl"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabControl.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabControl.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabControl.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabControl.AddParsedSubObject(System.Object)">
+            <summary>
+            Notifies the server control that an element, either XML or HTML, was parsed, and adds the element to the server control's <see cref="T:System.Web.UI.ControlCollection" /> object.
+            </summary>
+            <param name="obj">An <see cref="T:System.Object" /> that represents the parsed element.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.TabControl.TabPages">
+            <summary>
+            Gets the tab pages.
+            </summary>
+            <value>
+            The tab pages.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.TabControl.ActiveTabPage">
+            <summary>
+            Gets or sets the active tab page.
+            </summary>
+            <value>
+            The active tab page.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.TabControl.Controls">
+            <summary>
+            Gets a <see cref="T:System.Web.UI.ControlCollection" /> object that represents the child controls for a specified server control in the UI hierarchy.
+            </summary>
+            <returns>
+            The collection of child controls for the specified server control.
+              </returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Table.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.Table"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Table.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Table.SetPaginator(System.Collections.IEnumerable@)">
+            <summary>
+            Sets the paginator.
+            </summary>
+            <param name="retrievedData">The retrieved data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Table.PerformDataBinding(System.Collections.IEnumerable)">
+            <summary>
+            Performs the data binding.
+            </summary>
+            <param name="retrievedData">The retrieved data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Table.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Table.CreateChildControls">
+            <summary>
+            Called by the ASP.NET page framework to notify server controls that use composition-based implementation to create any child controls they contain in preparation for posting back or rendering.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Table.AddParsedSubObject(System.Object)">
+            <summary>
+            Notifies the server control that an element, either XML or HTML, was parsed, and adds the element to the server control's <see cref="T:System.Web.UI.ControlCollection" /> object.
+            </summary>
+            <param name="obj">An <see cref="T:System.Object" /> that represents the parsed element.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Table.CreateColumn(System.ComponentModel.PropertyDescriptor,System.Object,NewLife.Bootstrap.Controls.BoundColumn)">
+            <summary>
+            Creates the column.
+            </summary>
+            <param name="prop">The prop.</param>
+            <param name="dataItem">The data item.</param>
+            <param name="column">The column.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Table.CreateCheckBoxColumn(System.ComponentModel.PropertyDescriptor,System.Object,NewLife.Bootstrap.Controls.CheckBoxColumn)">
+            <summary>
+            Creates the check box column.
+            </summary>
+            <param name="prop">The prop.</param>
+            <param name="dataItem">The data item.</param>
+            <param name="column">The column.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Table.CreateDateColumn(System.ComponentModel.PropertyDescriptor,System.Object,NewLife.Bootstrap.Controls.DateColumn)">
+            <summary>
+            Creates the date column.
+            </summary>
+            <param name="prop">The prop.</param>
+            <param name="dataItem">The data item.</param>
+            <param name="column">The column.</param>
+            <returns></returns>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Table.CreateHyperlinkColumn(System.ComponentModel.PropertyDescriptor,System.Object,NewLife.Bootstrap.Controls.HyperlinkColumn)">
+            <summary>
+            Creates the hyperlink column.
+            </summary>
+            <param name="prop">The prop.</param>
+            <param name="dataItem">The data item.</param>
+            <param name="column">The column.</param>
+            <returns></returns>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Table.Columns">
+            <summary>
+            Gets the tab pages.
+            </summary>
+            <value>
+            The tab pages.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Table.Footer">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>
+            The content.
+            </value>
+        </member>
+        <member name="T:NewLife.Bootstrap.Controls.TabPage">
+            <summary>
+            The individual TabPage class that holds the intermediary Tab page values
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabPage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.TabPage"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TabPage.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Sends server control content to a provided <see cref="T:System.Web.UI.HtmlTextWriter" /> object, which writes the content to be rendered on the client.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the server control content.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.TabPage.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>
+            The title.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.TabPage.Enabled">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:NewLife.Bootstrap.Controls.TabPage"/> is enabled.
+            </summary>
+            <value>
+              <c>true</c> if enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TextBox.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TextBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.TextBox"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.TextBox.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the <see cref="T:System.Web.UI.WebControls.TextBox" /> control to the specified <see cref="T:System.Web.UI.HtmlTextWriter" /> object.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> that receives the rendered output.</param>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.TextBox.PlaceHolder">
+            <summary>
+            Gets or sets the place holder.
+            </summary>
+            <value>
+            The place holder.
+            </value>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Window.AddCssClass(System.String)">
+            <summary>
+            Adds the CSS class.
+            </summary>
+            <param name="cssClass">The CSS class.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Window.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:NewLife.Bootstrap.Controls.Window"/> class.
+            </summary>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Window.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML opening tag of the control to the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Window.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the HTML closing tag of the control into the specified writer. This method is used primarily by control developers.
+            </summary>
+            <param name="writer">A <see cref="T:System.Web.UI.HtmlTextWriter" /> that represents the output stream to render HTML content on the client.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Window.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the control to the specified HTML writer.
+            </summary>
+            <param name="writer">The <see cref="T:System.Web.UI.HtmlTextWriter" /> object that receives the control content.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Window.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the contents.
+            </summary>
+            <param name="output">The output.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Window.OnInit(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> object that contains the event data.</param>
+        </member>
+        <member name="M:NewLife.Bootstrap.Controls.Window.CreateChildControls">
+            <summary>
+            Called by the ASP.NET page framework to notify server controls that use composition-based implementation to create any child controls they contain in preparation for posting back or rendering.
+            </summary>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Window.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>
+            The text.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Window.Content">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>
+            The content.
+            </value>
+        </member>
+        <member name="P:NewLife.Bootstrap.Controls.Window.Footer">
+            <summary>
+            Gets or sets the footer.
+            </summary>
+            <value>
+            The footer.
+            </value>
+        </member>
+    </members>
+</doc>

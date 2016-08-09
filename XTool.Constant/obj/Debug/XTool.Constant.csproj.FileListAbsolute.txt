@@ -1,0 +1,6 @@
+E:\廖祝杰\XTool\XTool.Constant\bin\Debug\XTool.Constant.dll
+E:\廖祝杰\XTool\XTool.Constant\bin\Debug\XTool.Constant.pdb
+E:\廖祝杰\XTool\XTool.Constant\obj\Debug\XTool.Constant.Properties.Resources.resources
+E:\廖祝杰\XTool\XTool.Constant\obj\Debug\XTool.Constant.csproj.GenerateResource.Cache
+E:\廖祝杰\XTool\XTool.Constant\obj\Debug\XTool.Constant.dll
+E:\廖祝杰\XTool\XTool.Constant\obj\Debug\XTool.Constant.pdb
