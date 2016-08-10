@@ -1,6 +1,0 @@
-E:\廖祝杰\XTool\XTool.Common\bin\Debug\XTool.Common.dll
-E:\廖祝杰\XTool\XTool.Common\bin\Debug\XTool.Common.pdb
-E:\廖祝杰\XTool\XTool.Common\obj\Debug\XTool.Common.Properties.Resources.resources
-E:\廖祝杰\XTool\XTool.Common\obj\Debug\XTool.Common.csproj.GenerateResource.Cache
-E:\廖祝杰\XTool\XTool.Common\obj\Debug\XTool.Common.dll
-E:\廖祝杰\XTool\XTool.Common\obj\Debug\XTool.Common.pdb
