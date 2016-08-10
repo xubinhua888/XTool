@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>XTool.App</RootNamespace>
-    <AssemblyName>XTool.App</AssemblyName>
+    <AssemblyName>口岸扫描</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -34,6 +34,15 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>system_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NewLife.Core, Version=6.0.6055.36071, Culture=neutral, processorArchitecture=MSIL">
@@ -105,6 +114,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -119,6 +129,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\System.Data.SQLite.dll" />
+    <None Include="Resources\System.Data.SQLite64.dll" />
     <Content Include="system_icon.ico" />
   </ItemGroup>
   <ItemGroup>

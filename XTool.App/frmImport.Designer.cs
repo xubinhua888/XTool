@@ -34,12 +34,10 @@
             this.btnOK = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnTemplateDown = new System.Windows.Forms.ToolStripButton();
-            this.colstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.collocation_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colmailno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvResult = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             this.SuspendLayout();
@@ -95,29 +93,6 @@
             this.btnTemplateDown.Text = "模板下载";
             this.btnTemplateDown.Click += new System.EventHandler(this.btnTemplateDown_Click);
             // 
-            // colstatus
-            // 
-            this.colstatus.HeaderText = "状态";
-            this.colstatus.Name = "colstatus";
-            this.colstatus.ReadOnly = true;
-            this.colstatus.Visible = false;
-            // 
-            // collocation_code
-            // 
-            this.collocation_code.DataPropertyName = "库位";
-            this.collocation_code.HeaderText = "库位";
-            this.collocation_code.Name = "collocation_code";
-            this.collocation_code.ReadOnly = true;
-            // 
-            // colmailno
-            // 
-            this.colmailno.DataPropertyName = "一段面单号";
-            this.colmailno.HeaderText = "一段面单号";
-            this.colmailno.MinimumWidth = 130;
-            this.colmailno.Name = "colmailno";
-            this.colmailno.ReadOnly = true;
-            this.colmailno.Width = 130;
-            // 
             // dgvResult
             // 
             this.dgvResult.AllowUserToAddRows = false;
@@ -129,7 +104,8 @@
             this.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2});
+            this.Column2,
+            this.Column3});
             this.dgvResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvResult.Location = new System.Drawing.Point(0, 38);
             this.dgvResult.Name = "dgvResult";
@@ -157,6 +133,13 @@
             this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Column2.Width = 35;
             // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 19;
+            // 
             // frmImport
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -182,11 +165,9 @@
         private System.Windows.Forms.ToolStripButton btnTemplateDown;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnOK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colstatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn collocation_code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colmailno;
         private System.Windows.Forms.DataGridView dgvResult;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

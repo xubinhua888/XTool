@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,32 @@ namespace XTool.App
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            //初始化数据库
+            XTool.BLL.OrderBLL.DatabaseInit(System.IO.Path.Combine(Application.StartupPath, "Data", "data.db"));
+            #region 自动释放Sqlite文件
+            if (!Directory.Exists(Path.Combine(Application.StartupPath, "Plugins")))
+            {
+                Directory.CreateDirectory(Path.Combine(Application.StartupPath, "Plugins"));
+            }
+            string strSqliteFile = Path.Combine(Application.StartupPath, "Plugins", "System.Data.SQLite.dll");
+            if (!System.IO.File.Exists(strSqliteFile))
+            {
+                FileStream fileStream = new FileStream(strSqliteFile, FileMode.Create, FileAccess.Write, FileShare.None);
+                byte[] fileByte = null;
+                if (NewLife.Runtime.Is64BitOperatingSystem)
+                {
+                    fileByte = XTool.App.Properties.Resources.System_Data_SQLite;
+                }
+                else
+                {
+                    fileByte = XTool.App.Properties.Resources.System_Data_SQLite64;
+                }
+                fileStream.Write(fileByte, 0, fileByte.Length);
+                fileStream.Flush();
+                fileStream.Close();
+            }
+            #endregion
+
             dgvResult.AutoGenerateColumns = false;
             sounder.Init();
         }
