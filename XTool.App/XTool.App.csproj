@@ -36,9 +36,9 @@
     <ApplicationIcon>system_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NewLife.Core, Version=5.6.5941.32092, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\referenceDLL\XCode\NewLife.Core.dll</HintPath>
+    <Reference Include="NewLife.Core, Version=6.0.6055.36071, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewLife.Core.6.0.6055.36071\lib\net40\NewLife.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,9 +50,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="XCode, Version=9.0.5941.32093, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\referenceDLL\XCode\XCode.dll</HintPath>
+    <Reference Include="XCode, Version=9.0.6055.30543, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewLife.XCode.9.0.6055.30543\lib\net40\XCode.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +104,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

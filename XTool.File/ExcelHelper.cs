@@ -341,11 +341,11 @@ namespace XTool.File
                 return null;
             switch (cell.CellType)
             {
-                case CellType.BLANK: //BLANK:
+                case CellType.Blank: //BLANK:
                     return null;
-                case CellType.BOOLEAN: //BOOLEAN:
+                case CellType.Boolean: //BOOLEAN:
                     return cell.BooleanCellValue;
-                case CellType.NUMERIC: //NUMERIC:
+                case CellType.Numeric: //NUMERIC:
                     if (NPOI.SS.UserModel.DateUtil.IsCellDateFormatted(cell))
                     {
                         return cell.DateCellValue;
@@ -354,11 +354,11 @@ namespace XTool.File
                     {
                         return cell.NumericCellValue;
                     }
-                case CellType.STRING: //STRING:
+                case CellType.String: //STRING:
                     return cell.StringCellValue;
-                case CellType.ERROR: //ERROR:
+                case CellType.Error: //ERROR:
                     return cell.ErrorCellValue;
-                case CellType.FORMULA: //FORMULA:
+                case CellType.Formula: //FORMULA:
                     return cell.NumericCellValue;
                 default:
                     return "=" + cell.CellFormula;
@@ -483,26 +483,26 @@ namespace XTool.File
                 return null;
             switch (cell.CellType)
             {
-                case CellType.BLANK: //BLANK:
+                case CellType.Blank: //BLANK:
                     return null;
-                case CellType.BOOLEAN: //BOOLEAN:
+                case CellType.Boolean: //BOOLEAN:
                     return cell.BooleanCellValue;
-                case CellType.NUMERIC: //NUMERIC:
+                case CellType.Numeric: //NUMERIC:
                     return cell.NumericCellValue;
-                case CellType.STRING: //STRING:
+                case CellType.String: //STRING:
                     return cell.StringCellValue;
-                case CellType.ERROR: //ERROR:
+                case CellType.Error: //ERROR:
                     return cell.ErrorCellValue;
-                case CellType.FORMULA: //FORMULA:
+                case CellType.Formula: //FORMULA:
                     switch (cell.CachedFormulaResultType)
                     {
-                        case CellType.BOOLEAN:
+                        case CellType.Boolean:
                             return cell.BooleanCellValue;
-                        case CellType.ERROR:
+                        case CellType.Error:
                             return cell.ErrorCellValue;
-                        case CellType.NUMERIC:
+                        case CellType.Numeric:
                             return cell.NumericCellValue;
-                        case CellType.STRING:
+                        case CellType.String:
                             return cell.StringCellValue;
                         default:
                             return string.Empty;
@@ -894,7 +894,7 @@ namespace XTool.File
                                 ICell cell = row.GetCell(indexCell + i);
                                 if (cell == null)
                                 {
-                                    cell = row.CreateCell(indexCell + i, CellType.STRING);
+                                    cell = row.CreateCell(indexCell + i, CellType.String);
                                 }
                                 cell.SetCellValue(item.ExportTable.Columns[i].ColumnName);
                             }
@@ -916,7 +916,7 @@ namespace XTool.File
                                     ICell cell = row.GetCell(indexCell + j);
                                     if (cell == null)
                                     {
-                                        cell = row.CreateCell(indexCell + j, CellType.STRING);
+                                        cell = row.CreateCell(indexCell + j, CellType.String);
                                     }
                                     cell.SetCellValue(item.ExportTable.Rows[i][j].ToString());
                                 }
@@ -940,7 +940,7 @@ namespace XTool.File
                                 ICell cellTitle = row.GetCell(indexCell);
                                 if (cellTitle == null)
                                 {
-                                    cellTitle = row.CreateCell(indexCell, CellType.STRING);
+                                    cellTitle = row.CreateCell(indexCell, CellType.String);
                                 }
                                 cellTitle.SetCellValue(item.ExportTable.Columns[i].ColumnName);
                             }
@@ -952,7 +952,7 @@ namespace XTool.File
                                     ICell cellValue = row.GetCell(cellIndex);
                                     if (cellValue == null)
                                     {
-                                        cellValue = row.CreateCell(cellIndex, CellType.STRING);
+                                        cellValue = row.CreateCell(cellIndex, CellType.String);
                                     }
                                     cellValue.SetCellValue(item.ExportTable.Rows[j][i].ToString());
                                 }
