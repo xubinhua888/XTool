@@ -37,11 +37,11 @@ namespace XTool.App
                 byte[] fileByte = null;
                 if (NewLife.Runtime.Is64BitOperatingSystem)
                 {
-                    fileByte = XTool.App.Properties.Resources.System_Data_SQLite;
+                    fileByte = XTool.App.Properties.Resources.System_Data_SQLite64;
                 }
                 else
                 {
-                    fileByte = XTool.App.Properties.Resources.System_Data_SQLite64;
+                    fileByte = XTool.App.Properties.Resources.System_Data_SQLite;
                 }
                 fileStream.Write(fileByte, 0, fileByte.Length);
                 fileStream.Flush();

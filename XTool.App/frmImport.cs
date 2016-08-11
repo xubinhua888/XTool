@@ -74,7 +74,11 @@ namespace XTool.App
                     btnOK.Enabled = false;
                     btnImport.Enabled = false;
                     btnTemplateDown.Enabled = false;
-                    Import(openFile.FileName);
+                    if (!Import(openFile.FileName))
+                    {
+                        btnImport.Enabled = true;
+                        btnTemplateDown.Enabled = true;
+                    }
                 }
             }
             catch (Exception ex)
@@ -86,23 +90,23 @@ namespace XTool.App
                 this.Cursor = Cursors.Default;
             }
         }
-        private void Import(string fileName)
+        private bool Import(string fileName)
         {
             dtImportData = ExcelHelper.ExcelToTable(fileName, 0);
             if (dtImportData == null && dtImportData.Columns.Count < 1 && dtImportData.Rows.Count < 1)
             {
                 MessageBox.Show("从导入的文件中未加载出任何数据，请确认数据在第一个Sheet页中!");
-                return;
+                return false;
             }
             if (!dtImportData.Columns.Contains(Column1.DataPropertyName))
             {
                 MessageBox.Show(string.Format("导入的文件中不包含列:{0} !", Column1.HeaderText));
-                return;
+                return false;
             }
             if (!dtImportData.Columns.Contains(Column2.DataPropertyName))
             {
                 MessageBox.Show(string.Format("导入的文件中不包含列:{0} !", Column2.HeaderText));
-                return;
+                return false;
             }
             foreach (DataRow drImportData in dtImportData.Rows)
             {
@@ -125,6 +129,7 @@ namespace XTool.App
                 Thread thread = new Thread(CheckData);
                 thread.Start();
             }
+            return true;
         }
 
         private void CheckData()
