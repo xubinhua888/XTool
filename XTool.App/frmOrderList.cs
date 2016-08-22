@@ -49,13 +49,32 @@ namespace XTool.App
             }
             try
             {
-                if (MessageBox.Show("确定要删除选中的数据吗?", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("确定要删除选中的数据吗，删除后无法恢复?", "提示", MessageBoxButtons.OK) == DialogResult.OK)
                 {
                     int id = int.Parse(dgvResult.CurrentRow.Cells[Column1.Name].Value.ToString());
                     OrderBLL.DeleteOrderBatch(id);
                     dgvResult.DataSource = OrderBLL.GetOrderBatchList();
                     MessageBox.Show("删除成功!");
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+            if (dgvResult.CurrentRow == null)
+            {
+                return;
+            }
+            try
+            {
+                int id = int.Parse(dgvResult.CurrentRow.Cells[Column1.Name].Value.ToString());
+                frmLog log = new frmLog();
+                log.SetDataSource(OrderBLL.GetOrderBatchLogList(id));
+                log.ShowDialog();
             }
             catch (Exception ex)
             {

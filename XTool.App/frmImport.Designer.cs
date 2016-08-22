@@ -35,9 +35,10 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnTemplateDown = new System.Windows.Forms.ToolStripButton();
             this.dgvResult = new System.Windows.Forms.DataGridView();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             this.SuspendLayout();
@@ -103,9 +104,10 @@
             this.dgvResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column3,
+            this.Column4,
             this.Column1,
-            this.Column2,
-            this.Column3});
+            this.Column2});
             this.dgvResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvResult.Location = new System.Drawing.Point(0, 38);
             this.dgvResult.Name = "dgvResult";
@@ -115,9 +117,27 @@
             this.dgvResult.Size = new System.Drawing.Size(977, 503);
             this.dgvResult.TabIndex = 131;
             // 
+            // Column3
+            // 
+            this.Column3.Frozen = true;
+            this.Column3.HeaderText = "";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 19;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "总单号";
+            this.Column4.Frozen = true;
+            this.Column4.HeaderText = "总单号";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 66;
+            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "分运单号";
+            this.Column1.Frozen = true;
             this.Column1.HeaderText = "分运单号";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -127,18 +147,12 @@
             // Column2
             // 
             this.Column2.DataPropertyName = "状态";
+            this.Column2.Frozen = true;
             this.Column2.HeaderText = "状态";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Column2.Width = 35;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 19;
             // 
             // frmImport
             // 
@@ -166,8 +180,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnOK;
         private System.Windows.Forms.DataGridView dgvResult;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

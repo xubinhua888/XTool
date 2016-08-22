@@ -13,70 +13,71 @@ namespace XTool.BLL
     [Serializable]
     [DataObject]
     [Description("")]
-    [BindIndex("sqlite_master_PK_OrderItem", true, "id")]
-    [BindIndex("index_orderitem_hawb_code", false, "hawb_code")]
+    [BindIndex("sqlite_master_PK_OrderItem", true, "ID")]
+    [BindIndex("Index_OrderItem_HawbCode", false, "HawbCode")]
+    [BindIndex("Index_OrderItem_BatchID", false, "BatchID")]
     [BindTable("OrderItem", Description = "", ConnName = "ConnName", DbType = DatabaseType.SQLite)]
     public partial class OrderItem : IOrderItem
     {
         #region 属性
-        private Int32 _id;
+        private Int32 _ID;
         /// <summary></summary>
-        [DisplayName("id")]
+        [DisplayName("ID")]
         [Description("")]
         [DataObjectField(true, true, false, 8)]
-        [BindColumn(1, "id", "", null, "integer", 19, 0, false)]
-        public virtual Int32 id
+        [BindColumn(1, "ID", "", null, "integer", 19, 0, false)]
+        public virtual Int32 ID
         {
-            get { return _id; }
-            set { if (OnPropertyChanging(__.id, value)) { _id = value; OnPropertyChanged(__.id); } }
+            get { return _ID; }
+            set { if (OnPropertyChanging(__.ID, value)) { _ID = value; OnPropertyChanged(__.ID); } }
         }
 
-        private Int64 _order_id;
+        private Int64 _BatchID;
         /// <summary></summary>
-        [DisplayName("order_id")]
+        [DisplayName("BatchID")]
         [Description("")]
-        [DataObjectField(false, false, true, 8)]
-        [BindColumn(2, "order_id", "", null, "integer", 19, 0, false)]
-        public virtual Int64 order_id
+        [DataObjectField(false, false, false, 8)]
+        [BindColumn(2, "BatchID", "", null, "integer", 19, 0, false)]
+        public virtual Int64 BatchID
         {
-            get { return _order_id; }
-            set { if (OnPropertyChanging(__.order_id, value)) { _order_id = value; OnPropertyChanged(__.order_id); } }
+            get { return _BatchID; }
+            set { if (OnPropertyChanging(__.BatchID, value)) { _BatchID = value; OnPropertyChanged(__.BatchID); } }
         }
 
-        private String _hawb_code;
+        private String _HawbCode;
         /// <summary></summary>
-        [DisplayName("hawb_code")]
+        [DisplayName("HawbCode")]
         [Description("")]
-        [DataObjectField(false, false, true, 64)]
-        [BindColumn(3, "hawb_code", "", null, "text(64)", 0, 0, false)]
-        public virtual String hawb_code
+        [DataObjectField(false, false, false, 64)]
+        [BindColumn(3, "HawbCode", "", null, "text(64)", 0, 0, false)]
+        public virtual String HawbCode
         {
-            get { return _hawb_code; }
-            set { if (OnPropertyChanging(__.hawb_code, value)) { _hawb_code = value; OnPropertyChanged(__.hawb_code); } }
+            get { return _HawbCode; }
+            set { if (OnPropertyChanging(__.HawbCode, value)) { _HawbCode = value; OnPropertyChanged(__.HawbCode); } }
         }
 
-        private String _order_status;
+        private String _ScanningTime;
         /// <summary></summary>
-        [DisplayName("order_status")]
-        [Description("")]
-        [DataObjectField(false, false, true, 256)]
-        [BindColumn(4, "order_status", "", null, "text(256)", 0, 0, false)]
-        public virtual String order_status
-        {
-            get { return _order_status; }
-            set { if (OnPropertyChanging(__.order_status, value)) { _order_status = value; OnPropertyChanged(__.order_status); } }
-        }
-
-        private String _scanning_time;
-        /// <summary></summary>
-        [DisplayName("scanning_time")]
+        [DisplayName("ScanningTime")]
         [Description("")]
         [DataObjectField(false, false, true, 32)]
-        [BindColumn(5, "scanning_time", "", null, "text(32)", 0, 0, false)]
-        public virtual String scanning_time
+        [BindColumn(4, "ScanningTime", "", null, "text(32)", 0, 0, false)]
+        public virtual String ScanningTime
         {
-            get { return _scanning_time; }
-            set { if (OnPropertyChanging(__.scanning_time, value)) { _scanning_time = value; OnPropertyChanged(__.scanning_time); } }
+            get { return _ScanningTime; }
+            set { if (OnPropertyChanging(__.ScanningTime, value)) { _ScanningTime = value; OnPropertyChanged(__.ScanningTime); } }
+        }
+
+        private String _OrderStatus;
+        /// <summary></summary>
+        [DisplayName("OrderStatus")]
+        [Description("")]
+        [DataObjectField(false, false, false, 128)]
+        [BindColumn(5, "OrderStatus", "", null, "text(128)", 0, 0, false)]
+        public virtual String OrderStatus
+        {
+            get { return _OrderStatus; }
+            set { if (OnPropertyChanging(__.OrderStatus, value)) { _OrderStatus = value; OnPropertyChanged(__.OrderStatus); } }
         }
         #endregion
 
@@ -94,11 +95,11 @@ namespace XTool.BLL
             {
                 switch (name)
                 {
-                    case __.id : return _id;
-                    case __.order_id : return _order_id;
-                    case __.hawb_code : return _hawb_code;
-                    case __.order_status : return _order_status;
-                    case __.scanning_time : return _scanning_time;
+                    case __.ID : return _ID;
+                    case __.BatchID : return _BatchID;
+                    case __.HawbCode : return _HawbCode;
+                    case __.ScanningTime : return _ScanningTime;
+                    case __.OrderStatus : return _OrderStatus;
                     default: return base[name];
                 }
             }
@@ -106,11 +107,11 @@ namespace XTool.BLL
             {
                 switch (name)
                 {
-                    case __.id : _id = Convert.ToInt32(value); break;
-                    case __.order_id : _order_id = Convert.ToInt64(value); break;
-                    case __.hawb_code : _hawb_code = Convert.ToString(value); break;
-                    case __.order_status : _order_status = Convert.ToString(value); break;
-                    case __.scanning_time : _scanning_time = Convert.ToString(value); break;
+                    case __.ID : _ID = Convert.ToInt32(value); break;
+                    case __.BatchID : _BatchID = Convert.ToInt64(value); break;
+                    case __.HawbCode : _HawbCode = Convert.ToString(value); break;
+                    case __.ScanningTime : _ScanningTime = Convert.ToString(value); break;
+                    case __.OrderStatus : _OrderStatus = Convert.ToString(value); break;
                     default: base[name] = value; break;
                 }
             }
@@ -122,19 +123,19 @@ namespace XTool.BLL
         public partial class _
         {
             ///<summary></summary>
-            public static readonly Field id = FindByName(__.id);
+            public static readonly Field ID = FindByName(__.ID);
 
             ///<summary></summary>
-            public static readonly Field order_id = FindByName(__.order_id);
+            public static readonly Field BatchID = FindByName(__.BatchID);
 
             ///<summary></summary>
-            public static readonly Field hawb_code = FindByName(__.hawb_code);
+            public static readonly Field HawbCode = FindByName(__.HawbCode);
 
             ///<summary></summary>
-            public static readonly Field order_status = FindByName(__.order_status);
+            public static readonly Field ScanningTime = FindByName(__.ScanningTime);
 
             ///<summary></summary>
-            public static readonly Field scanning_time = FindByName(__.scanning_time);
+            public static readonly Field OrderStatus = FindByName(__.OrderStatus);
 
             static Field FindByName(String name) { return Meta.Table.FindByName(name); }
         }
@@ -143,19 +144,19 @@ namespace XTool.BLL
         partial class __
         {
             ///<summary></summary>
-            public const String id = "id";
+            public const String ID = "ID";
 
             ///<summary></summary>
-            public const String order_id = "order_id";
+            public const String BatchID = "BatchID";
 
             ///<summary></summary>
-            public const String hawb_code = "hawb_code";
+            public const String HawbCode = "HawbCode";
 
             ///<summary></summary>
-            public const String order_status = "order_status";
+            public const String ScanningTime = "ScanningTime";
 
             ///<summary></summary>
-            public const String scanning_time = "scanning_time";
+            public const String OrderStatus = "OrderStatus";
 
         }
         #endregion
@@ -167,19 +168,19 @@ namespace XTool.BLL
     {
         #region 属性
         /// <summary></summary>
-        Int32 id { get; set; }
+        Int32 ID { get; set; }
 
         /// <summary></summary>
-        Int64 order_id { get; set; }
+        Int64 BatchID { get; set; }
 
         /// <summary></summary>
-        String hawb_code { get; set; }
+        String HawbCode { get; set; }
 
         /// <summary></summary>
-        String order_status { get; set; }
+        String ScanningTime { get; set; }
 
         /// <summary></summary>
-        String scanning_time { get; set; }
+        String OrderStatus { get; set; }
         #endregion
 
         #region 获取/设置 字段值

@@ -81,14 +81,16 @@ namespace XTool.App
                         return;
                     }
                     txtHawbCode.Text = string.Empty;
+                 
                     lblCountStr.Text = OrderBLL.ScannedOrderItem(lstOrderItem[0]);
-                    if (string.Equals(lstOrderItem[0].order_status, "放行"))
+                    if (string.Equals(lstOrderItem[0].OrderStatus, "放行"))
                     {
-                        ShowMsg(string.Format("{0}，正常!", lstOrderItem[0].order_status));
+                        ShowMsg(string.Format("{0}，正常!", lstOrderItem[0].OrderStatus));
+                      
                     }
                     else
                     {
-                        ShowError(string.Format("{0}，异常状态!", lstOrderItem[0].order_status));
+                        ShowError(string.Format("{0}，异常状态!", lstOrderItem[0].OrderStatus));
                     }
                     AddToHistory(lstOrderItem[0]);
                 }
@@ -121,8 +123,8 @@ namespace XTool.App
         private void AddToHistory(OrderItem item)
         {
             dgvResult.Rows.Insert(0, 1);
-            dgvResult.Rows[0].Cells[Column1.Name].Value = item.hawb_code;
-            dgvResult.Rows[0].Cells[Column2.Name].Value = item.order_status;
+            dgvResult.Rows[0].Cells[Column1.Name].Value = item.HawbCode;
+            dgvResult.Rows[0].Cells[Column2.Name].Value = item.OrderStatus;
             dgvResult.Rows[0].Cells[Column3.Name].Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             dgvResult.CurrentCell = dgvResult.Rows[0].Cells[Column1.Name];
             lblCount.Text = string.Format("扫描记录-{0}", dgvResult.Rows.Count);

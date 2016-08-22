@@ -8,51 +8,51 @@ using XCode.DataAccessLayer;
 
 namespace XTool.BLL
 {
-    /// <summary>OrderBatch</summary>
+    /// <summary>OrderItemLog</summary>
     /// <remarks></remarks>
     [Serializable]
     [DataObject]
     [Description("")]
-    [BindIndex("sqlite_master_PK_OrderBatch", true, "BatchID")]
-    [BindIndex("Index_OrderBatch_HawbCode", false, "HawbCode")]
-    [BindTable("OrderBatch", Description = "", ConnName = "ConnName", DbType = DatabaseType.SQLite)]
-    public partial class OrderBatch : IOrderBatch
+    [BindIndex("sqlite_master_PK_OrderItemLog", true, "LogID")]
+    [BindIndex("Index_OrderItemLog_OrderID", false, "OrderID")]
+    [BindTable("OrderItemLog", Description = "", ConnName = "ConnName", DbType = DatabaseType.SQLite)]
+    public partial class OrderItemLog : IOrderItemLog
     {
         #region 属性
-        private Int32 _BatchID;
+        private Int32 _LogID;
         /// <summary></summary>
-        [DisplayName("BatchID")]
+        [DisplayName("LogID")]
         [Description("")]
         [DataObjectField(true, true, false, 8)]
-        [BindColumn(1, "BatchID", "", null, "integer", 19, 0, false)]
-        public virtual Int32 BatchID
+        [BindColumn(1, "LogID", "", null, "integer", 19, 0, false)]
+        public virtual Int32 LogID
         {
-            get { return _BatchID; }
-            set { if (OnPropertyChanging(__.BatchID, value)) { _BatchID = value; OnPropertyChanged(__.BatchID); } }
+            get { return _LogID; }
+            set { if (OnPropertyChanging(__.LogID, value)) { _LogID = value; OnPropertyChanged(__.LogID); } }
         }
 
-        private Int64 _StatusID;
+        private Int64 _OrderID;
         /// <summary></summary>
-        [DisplayName("StatusID")]
+        [DisplayName("OrderID")]
         [Description("")]
         [DataObjectField(false, false, false, 8)]
-        [BindColumn(2, "StatusID", "", "1", "integer", 19, 0, false)]
-        public virtual Int64 StatusID
+        [BindColumn(2, "OrderID", "", null, "integer", 19, 0, false)]
+        public virtual Int64 OrderID
         {
-            get { return _StatusID; }
-            set { if (OnPropertyChanging(__.StatusID, value)) { _StatusID = value; OnPropertyChanged(__.StatusID); } }
+            get { return _OrderID; }
+            set { if (OnPropertyChanging(__.OrderID, value)) { _OrderID = value; OnPropertyChanged(__.OrderID); } }
         }
 
-        private String _HawbCode;
+        private String _LogConent;
         /// <summary></summary>
-        [DisplayName("HawbCode")]
+        [DisplayName("LogConent")]
         [Description("")]
-        [DataObjectField(false, false, false, 64)]
-        [BindColumn(3, "HawbCode", "", null, "text(64)", 0, 0, false)]
-        public virtual String HawbCode
+        [DataObjectField(false, false, false, 512)]
+        [BindColumn(3, "LogConent", "", null, "text(512)", 0, 0, false)]
+        public virtual String LogConent
         {
-            get { return _HawbCode; }
-            set { if (OnPropertyChanging(__.HawbCode, value)) { _HawbCode = value; OnPropertyChanged(__.HawbCode); } }
+            get { return _LogConent; }
+            set { if (OnPropertyChanging(__.LogConent, value)) { _LogConent = value; OnPropertyChanged(__.LogConent); } }
         }
 
         private String _CreateTime;
@@ -82,9 +82,9 @@ namespace XTool.BLL
             {
                 switch (name)
                 {
-                    case __.BatchID : return _BatchID;
-                    case __.StatusID : return _StatusID;
-                    case __.HawbCode : return _HawbCode;
+                    case __.LogID : return _LogID;
+                    case __.OrderID : return _OrderID;
+                    case __.LogConent : return _LogConent;
                     case __.CreateTime : return _CreateTime;
                     default: return base[name];
                 }
@@ -93,9 +93,9 @@ namespace XTool.BLL
             {
                 switch (name)
                 {
-                    case __.BatchID : _BatchID = Convert.ToInt32(value); break;
-                    case __.StatusID : _StatusID = Convert.ToInt64(value); break;
-                    case __.HawbCode : _HawbCode = Convert.ToString(value); break;
+                    case __.LogID : _LogID = Convert.ToInt32(value); break;
+                    case __.OrderID : _OrderID = Convert.ToInt64(value); break;
+                    case __.LogConent : _LogConent = Convert.ToString(value); break;
                     case __.CreateTime : _CreateTime = Convert.ToString(value); break;
                     default: base[name] = value; break;
                 }
@@ -104,17 +104,17 @@ namespace XTool.BLL
         #endregion
 
         #region 字段名
-        /// <summary>取得OrderBatch字段信息的快捷方式</summary>
+        /// <summary>取得OrderItemLog字段信息的快捷方式</summary>
         public partial class _
         {
             ///<summary></summary>
-            public static readonly Field BatchID = FindByName(__.BatchID);
+            public static readonly Field LogID = FindByName(__.LogID);
 
             ///<summary></summary>
-            public static readonly Field StatusID = FindByName(__.StatusID);
+            public static readonly Field OrderID = FindByName(__.OrderID);
 
             ///<summary></summary>
-            public static readonly Field HawbCode = FindByName(__.HawbCode);
+            public static readonly Field LogConent = FindByName(__.LogConent);
 
             ///<summary></summary>
             public static readonly Field CreateTime = FindByName(__.CreateTime);
@@ -122,17 +122,17 @@ namespace XTool.BLL
             static Field FindByName(String name) { return Meta.Table.FindByName(name); }
         }
 
-        /// <summary>取得OrderBatch字段名称的快捷方式</summary>
+        /// <summary>取得OrderItemLog字段名称的快捷方式</summary>
         partial class __
         {
             ///<summary></summary>
-            public const String BatchID = "BatchID";
+            public const String LogID = "LogID";
 
             ///<summary></summary>
-            public const String StatusID = "StatusID";
+            public const String OrderID = "OrderID";
 
             ///<summary></summary>
-            public const String HawbCode = "HawbCode";
+            public const String LogConent = "LogConent";
 
             ///<summary></summary>
             public const String CreateTime = "CreateTime";
@@ -141,19 +141,19 @@ namespace XTool.BLL
         #endregion
     }
 
-    /// <summary>OrderBatch接口</summary>
+    /// <summary>OrderItemLog接口</summary>
     /// <remarks></remarks>
-    public partial interface IOrderBatch
+    public partial interface IOrderItemLog
     {
         #region 属性
         /// <summary></summary>
-        Int32 BatchID { get; set; }
+        Int32 LogID { get; set; }
 
         /// <summary></summary>
-        Int64 StatusID { get; set; }
+        Int64 OrderID { get; set; }
 
         /// <summary></summary>
-        String HawbCode { get; set; }
+        String LogConent { get; set; }
 
         /// <summary></summary>
         String CreateTime { get; set; }

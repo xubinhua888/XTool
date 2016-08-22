@@ -98,6 +98,11 @@ namespace XTool.App
                 MessageBox.Show("从导入的文件中未加载出任何数据，请确认数据在第一个Sheet页中!");
                 return false;
             }
+            if (!dtImportData.Columns.Contains(Column4.DataPropertyName))
+            {
+                MessageBox.Show(string.Format("导入的文件中不包含列:{0} !", Column4.HeaderText));
+                return false;
+            }
             if (!dtImportData.Columns.Contains(Column1.DataPropertyName))
             {
                 MessageBox.Show(string.Format("导入的文件中不包含列:{0} !", Column1.HeaderText));
@@ -108,6 +113,7 @@ namespace XTool.App
                 MessageBox.Show(string.Format("导入的文件中不包含列:{0} !", Column2.HeaderText));
                 return false;
             }
+
             foreach (DataRow drImportData in dtImportData.Rows)
             {
                 DataGridViewRow row = new DataGridViewRow();
@@ -120,7 +126,12 @@ namespace XTool.App
                 {
                     row.Cells[Column2.Index].Value = drImportData[Column2.DataPropertyName].ToString();
                 }
+                if (drImportData[Column4.DataPropertyName] != null)
+                {
+                    row.Cells[Column4.Index].Value = drImportData[Column4.DataPropertyName].ToString();
+                }
                 row.Cells[Column3.Index].Value = "待检查";
+                row.Tag = drImportData;
                 dgvResult.Rows.Add(row);
             }
 
@@ -141,6 +152,13 @@ namespace XTool.App
                 foreach (DataGridViewRow row in dgvResult.Rows)
                 {
                     row.Cells[Column3.Name].Value = "检查中";
+
+                    if (row.Cells[Column4.Index].Value == null || string.IsNullOrWhiteSpace(row.Cells[Column4.Index].Value.ToString()))
+                    {
+                        SetDataGridViewRowError(row, Column4.HeaderText + "不能为空");
+                        continue;
+                    }
+
                     if (row.Cells[Column1.Index].Value == null || string.IsNullOrWhiteSpace(row.Cells[Column1.Index].Value.ToString()))
                     {
                         SetDataGridViewRowError(row, Column1.HeaderText + "不能为空");
@@ -159,13 +177,6 @@ namespace XTool.App
                         continue;
                     }
                     dic.Add(row.Cells[Column1.Index].Value.ToString(), string.Empty);
-                    List<OrderItem> lstItem = OrderBLL.FindOrderItem(row.Cells[Column1.Index].Value.ToString());
-                    if (lstItem != null && lstItem.Count > 0)
-                    {
-                        SetDataGridViewRowError(row, "重复的" + Column1.HeaderText);
-                        continue;
-                    }
-
                     row.Cells[Column3.Name].Value = "待保存";
                     iCount++;
                 }
@@ -196,27 +207,63 @@ namespace XTool.App
         private void btnOK_Click(object sender, EventArgs e)
         {
             List<DataGridViewRow> lstRow = new List<DataGridViewRow>();
-            List<OrderItem> lstItem = new List<OrderItem>();
+            Dictionary<string, List<OrderItem>> dicItem = new Dictionary<string, List<OrderItem>>();
+            Dictionary<string, string> dicAttach = new Dictionary<string, string>();
             foreach (DataGridViewRow row in dgvResult.Rows)
             {
                 if (!string.Equals(row.Cells[Column3.Name].Value.ToString(), "待保存"))
                 {
                     continue;
                 }
-                lstItem.Add(new OrderItem()
+                if (!dicItem.ContainsKey(row.Cells[Column4.Name].Value.ToString()))
                 {
-                    hawb_code = row.Cells[Column1.Name].Value.ToString(),
-                    order_status = row.Cells[Column2.Name].Value.ToString()
+                    dicItem.Add(row.Cells[Column4.Name].Value.ToString(), new List<OrderItem>());
+                }
+                dicItem[row.Cells[Column4.Name].Value.ToString()].Add(new OrderItem()
+                {
+                    HawbCode = row.Cells[Column1.Name].Value.ToString(),
+                    OrderStatus = row.Cells[Column2.Name].Value.ToString()
                 });
                 lstRow.Add(row);
+
+                if (!dicAttach.ContainsKey(row.Cells[Column1.Name].Value.ToString()))
+                {
+                    dicAttach.Add(row.Cells[Column1.Name].Value.ToString(), GetJson(row.Tag));
+                }
             }
-            OrderBLL.AddOrderItem(lstItem);
+            OrderBLL.AddOrderItem(dicItem, dicAttach);
             lstRow.ForEach(p =>
             {
                 p.DefaultCellStyle.BackColor = Color.Green;
                 p.Cells[Column3.Name].Value = "保存成功";
             });
             MessageBox.Show("保存成功!");
+        }
+
+        private string GetJson(object tag)
+        {
+            if (tag == null)
+            {
+                return null;
+            }
+            DataRow row = tag as DataRow;
+            if (row == null)
+            {
+                return null;
+            }
+
+            Dictionary<string, string> dicJson = new Dictionary<string, string>();
+
+            foreach (DataColumn item in row.Table.Columns)
+            {
+                if (dicJson.ContainsKey(item.ColumnName))
+                {
+                    continue;
+                }
+                dicJson.Add(item.ColumnName, row[item.ColumnName].ToString());
+            }
+
+            return Newtonsoft.Json.JsonConvert.SerializeObject(dicJson);
         }
 
         #endregion

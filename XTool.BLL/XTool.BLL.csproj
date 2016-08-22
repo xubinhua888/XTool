@@ -50,9 +50,17 @@
   <ItemGroup>
     <Compile Include="OrderBatch.Biz.cs" />
     <Compile Include="OrderBatch.cs" />
+    <Compile Include="OrderBatchLog.Biz.cs" />
+    <Compile Include="OrderBatchLog.cs" />
+    <Compile Include="OrderBatchStatus.Biz.cs" />
+    <Compile Include="OrderBatchStatus.cs" />
     <Compile Include="OrderBLL.cs" />
     <Compile Include="OrderItem.Biz.cs" />
     <Compile Include="OrderItem.cs" />
+    <Compile Include="OrderItemAttach.Biz.cs" />
+    <Compile Include="OrderItemAttach.cs" />
+    <Compile Include="OrderItemLog.Biz.cs" />
+    <Compile Include="OrderItemLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,9 +12,9 @@ using XCode.Membership;
 
 namespace XTool.BLL
 {
-    /// <summary>OrderBatch</summary>
+    /// <summary>OrderItemAttach</summary>
     /// <remarks></remarks>
-    public partial class OrderBatch : Entity<OrderBatch>
+    public partial class OrderItemAttach : Entity<OrderItemAttach>
     {
         #region 对象操作
             ﻿
@@ -49,15 +49,14 @@ namespace XTool.BLL
         //    if (Meta.Count > 0) return;
 
         //    // 需要注意的是，如果该方法调用了其它实体类的首次数据库操作，目标实体类的数据初始化将会在同一个线程完成
-        //    if (XTrace.Debug) XTrace.WriteLine("开始初始化{0}[{1}]数据……", typeof(OrderBatch).Name, Meta.Table.DataTable.DisplayName);
+        //    if (XTrace.Debug) XTrace.WriteLine("开始初始化{0}[{1}]数据……", typeof(OrderItemAttach).Name, Meta.Table.DataTable.DisplayName);
 
-        //    var entity = new OrderBatch();
-        //    entity.StatusID = 0;
-        //    entity.HawbCode = "abc";
-        //    entity.CreateTime = "abc";
+        //    var entity = new OrderItemAttach();
+        //    entity.OrderID = 0;
+        //    entity.Content = "abc";
         //    entity.Insert();
 
-        //    if (XTrace.Debug) XTrace.WriteLine("完成初始化{0}[{1}]数据！", typeof(OrderBatch).Name, Meta.Table.DataTable.DisplayName);
+        //    if (XTrace.Debug) XTrace.WriteLine("完成初始化{0}[{1}]数据！", typeof(OrderItemAttach).Name, Meta.Table.DataTable.DisplayName);
         //}
 
 
@@ -84,30 +83,30 @@ namespace XTool.BLL
 
         #region 扩展查询
             ﻿
-        /// <summary>根据BatchID查找</summary>
-        /// <param name="batchid"></param>
+        /// <summary>根据OrderID查找</summary>
+        /// <param name="orderid"></param>
         /// <returns></returns>
         [DataObjectMethod(DataObjectMethodType.Select, false)]
-        public static OrderBatch FindByBatchID(Int32 batchid)
+        public static OrderItemAttach FindByOrderID(Int64 orderid)
         {
             if (Meta.Count >= 1000)
-                return Find(__.BatchID, batchid);
+                return Find(__.OrderID, orderid);
             else // 实体缓存
-                return Meta.Cache.Entities.Find(__.BatchID, batchid);
+                return Meta.Cache.Entities.Find(__.OrderID, orderid);
             // 单对象缓存
-            //return Meta.SingleCache[batchid];
+            //return Meta.SingleCache[orderid];
         }
 
-        /// <summary>根据HawbCode查找</summary>
-        /// <param name="hawbcode"></param>
+        /// <summary>根据OrderID查找</summary>
+        /// <param name="orderid"></param>
         /// <returns></returns>
         [DataObjectMethod(DataObjectMethodType.Select, false)]
-        public static EntityList<OrderBatch> FindAllByHawbCode(String hawbcode)
+        public static EntityList<OrderItemAttach> FindAllByOrderID(Int64 orderid)
         {
             if (Meta.Count >= 1000)
-                return FindAll(__.HawbCode, hawbcode);
+                return FindAll(__.OrderID, orderid);
             else // 实体缓存
-                return Meta.Cache.Entities.FindAll(__.HawbCode, hawbcode);
+                return Meta.Cache.Entities.FindAll(__.OrderID, orderid);
         }
 
         #endregion
@@ -122,7 +121,7 @@ namespace XTool.BLL
         /// <param name="key">关键字</param>
         /// <param name="param">分页排序参数，同时返回满足条件的总记录数</param>
         /// <returns>实体集</returns>
-        public static EntityList<OrderBatch> Search(Int32 userid, DateTime start, DateTime end, String key, PageParameter param)
+        public static EntityList<OrderItemAttach> Search(Int32 userid, DateTime start, DateTime end, String key, PageParameter param)
         {
             // WhereExpression重载&和|运算符，作为And和Or的替代
             // SearchWhereByKeys系列方法用于构建针对字符串字段的模糊搜索，第二个参数可指定要搜索的字段

@@ -52,10 +52,10 @@ namespace XTool.BLL
         //    if (XTrace.Debug) XTrace.WriteLine("开始初始化{0}[{1}]数据……", typeof(OrderItem).Name, Meta.Table.DataTable.DisplayName);
 
         //    var entity = new OrderItem();
-        //    entity.order_id = 0;
-        //    entity.hawb_code = "abc";
-        //    entity.order_status = "abc";
-        //    entity.scanning_time = "abc";
+        //    entity.BatchID = 0;
+        //    entity.HawbCode = "abc";
+        //    entity.ScanningTime = "abc";
+        //    entity.OrderStatus = "abc";
         //    entity.Insert();
 
         //    if (XTrace.Debug) XTrace.WriteLine("完成初始化{0}[{1}]数据！", typeof(OrderItem).Name, Meta.Table.DataTable.DisplayName);
@@ -85,30 +85,42 @@ namespace XTool.BLL
 
         #region 扩展查询
             ﻿
-        /// <summary>根据id查找</summary>
-        /// <param name="__id"></param>
+        /// <summary>根据ID查找</summary>
+        /// <param name="id"></param>
         /// <returns></returns>
         [DataObjectMethod(DataObjectMethodType.Select, false)]
-        public static OrderItem FindByid(Int32 __id)
+        public static OrderItem FindByID(Int32 id)
         {
             if (Meta.Count >= 1000)
-                return Find(__.id, __id);
+                return Find(__.ID, id);
             else // 实体缓存
-                return Meta.Cache.Entities.Find(__.id, __id);
+                return Meta.Cache.Entities.Find(__.ID, id);
             // 单对象缓存
-            //return Meta.SingleCache[__id];
+            //return Meta.SingleCache[id];
         }
 
-        /// <summary>根据hawb_code查找</summary>
-        /// <param name="__hawb_code"></param>
+        /// <summary>根据HawbCode查找</summary>
+        /// <param name="hawbcode"></param>
         /// <returns></returns>
         [DataObjectMethod(DataObjectMethodType.Select, false)]
-        public static EntityList<OrderItem> FindAllByhawb_code(String __hawb_code)
+        public static EntityList<OrderItem> FindAllByHawbCode(String hawbcode)
         {
             if (Meta.Count >= 1000)
-                return FindAll(__.hawb_code, __hawb_code);
+                return FindAll(__.HawbCode, hawbcode);
             else // 实体缓存
-                return Meta.Cache.Entities.FindAll(__.hawb_code, __hawb_code);
+                return Meta.Cache.Entities.FindAll(__.HawbCode, hawbcode);
+        }
+
+        /// <summary>根据BatchID查找</summary>
+        /// <param name="batchid"></param>
+        /// <returns></returns>
+        [DataObjectMethod(DataObjectMethodType.Select, false)]
+        public static EntityList<OrderItem> FindAllByBatchID(Int64 batchid)
+        {
+            if (Meta.Count >= 1000)
+                return FindAll(__.BatchID, batchid);
+            else // 实体缓存
+                return Meta.Cache.Entities.FindAll(__.BatchID, batchid);
         }
 
         #endregion
