@@ -31,12 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrderView));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnDelete = new System.Windows.Forms.ToolStripButton();
-            this.dgvResult = new System.Windows.Forms.DataGridView();
             this.btnLog = new System.Windows.Forms.ToolStripButton();
+            this.dgvResult = new System.Windows.Forms.DataGridView();
+            this.btnExport = new System.Windows.Forms.ToolStripButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +50,7 @@
             this.toolStrip1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStrip1.BackgroundImage")));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnDelete,
+            this.btnExport,
             this.btnLog});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -64,6 +68,16 @@
             this.btnDelete.Text = "删除";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnLog
+            // 
+            this.btnLog.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.btnLog.Image = ((System.Drawing.Image)(resources.GetObject("btnLog.Image")));
+            this.btnLog.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLog.Name = "btnLog";
+            this.btnLog.Size = new System.Drawing.Size(52, 35);
+            this.btnLog.Text = "日志";
+            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
+            // 
             // dgvResult
             // 
             this.dgvResult.AllowUserToAddRows = false;
@@ -76,8 +90,10 @@
             this.dgvResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column4,
+            this.Column5,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.Column6});
             this.dgvResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvResult.Location = new System.Drawing.Point(0, 38);
             this.dgvResult.Name = "dgvResult";
@@ -87,15 +103,15 @@
             this.dgvResult.Size = new System.Drawing.Size(970, 583);
             this.dgvResult.TabIndex = 134;
             // 
-            // btnLog
+            // btnExport
             // 
-            this.btnLog.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.btnLog.Image = ((System.Drawing.Image)(resources.GetObject("btnLog.Image")));
-            this.btnLog.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnLog.Name = "btnLog";
-            this.btnLog.Size = new System.Drawing.Size(52, 35);
-            this.btnLog.Text = "日志";
-            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
+            this.btnExport.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
+            this.btnExport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(52, 35);
+            this.btnExport.Text = "导出";
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // Column1
             // 
@@ -115,6 +131,15 @@
             this.Column4.ReadOnly = true;
             this.Column4.Width = 78;
             // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "BatchHawbCode";
+            this.Column5.Frozen = true;
+            this.Column5.HeaderText = "总单号";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 66;
+            // 
             // Column2
             // 
             this.Column2.DataPropertyName = "HawbCode";
@@ -132,6 +157,14 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 54;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "BatchCreateTime";
+            this.Column6.HeaderText = "导入时间";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 78;
             // 
             // frmOrderView
             // 
@@ -158,10 +191,13 @@
         private System.Windows.Forms.ToolStripButton btnDelete;
         private System.Windows.Forms.DataGridView dgvResult;
         private System.Windows.Forms.ToolStripButton btnLog;
+        private System.Windows.Forms.ToolStripButton btnExport;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
 
     }
 }

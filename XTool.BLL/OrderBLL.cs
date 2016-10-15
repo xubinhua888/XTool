@@ -150,12 +150,14 @@ ORDER BY
             return null;
         }
 
-        public static DataTable GetOrderItemList(int batchID)
+        public static DataTable GetOrderItemList(int batchID, int orderItemID)
         {
             DAL dal = DAL.Create("ConnName");
-            DataSet ds = dal.Session.Query(string.Format(@"
+            string strSQL = @"
 SELECT
 	a.ID,
+	c.HawbCode AS BatchHawbCode,
+	c.CreateTime AS BatchCreateTime,
 	a.BatchID,
 	a.HawbCode,
 	a.ScanningTime,
@@ -164,10 +166,16 @@ SELECT
 FROM
 	OrderItem a
 LEFT JOIN OrderItemAttach b ON a.ID = b.OrderID
-WHERE BatchID={0}
-ORDER BY
-	a.ID ASC", batchID));
-
+LEFT JOIN OrderBatch c ON a.BatchID = c.BatchID";
+            if (batchID > 0)
+            {
+                strSQL += string.Format(" WHERE a.BatchID={0} ORDER BY a.ID ASC", batchID);
+            }
+            else if (orderItemID > 0)
+            {
+                strSQL += string.Format(" WHERE a.ID={0} ORDER BY a.ID ASC", orderItemID);
+            }
+            DataSet ds = dal.Session.Query(strSQL);
             if (ds != null && ds.Tables != null && ds.Tables.Count > 0)
             {
                 return ds.Tables[0];

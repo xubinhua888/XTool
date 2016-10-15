@@ -122,12 +122,92 @@ namespace XTool.App
 
         private void AddToHistory(OrderItem item)
         {
+            DataTable dtResult = OrderBLL.GetOrderItemList(0, item.ID);
+            AddColumn(dtResult);
             dgvResult.Rows.Insert(0, 1);
-            dgvResult.Rows[0].Cells[Column1.Name].Value = item.HawbCode;
-            dgvResult.Rows[0].Cells[Column2.Name].Value = item.OrderStatus;
-            dgvResult.Rows[0].Cells[Column3.Name].Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            foreach (DataGridViewColumn dgvcolumn in dgvResult.Columns)
+            {
+                foreach (DataColumn column in dtResult.Columns)
+                {
+                    if(string.Equals(column.ColumnName,dgvcolumn.DataPropertyName))
+                    {
+                        dgvResult.Rows[0].Cells[dgvcolumn.Index].Value = dtResult.Rows[0][column.ColumnName].ToString();
+                    }
+                }
+            }
             dgvResult.CurrentCell = dgvResult.Rows[0].Cells[Column1.Name];
             lblCount.Text = string.Format("扫描记录-{0}", dgvResult.Rows.Count);
+        }
+
+
+        private void AddColumn(DataTable dtResult)
+        {
+            if (dtResult == null)
+            {
+                return;
+            }
+            Dictionary<DataRow, Dictionary<string, string>> dic = new Dictionary<DataRow, Dictionary<string, string>>();
+            List<string> lstAddColumn = new List<string>();
+            foreach (DataRow dc in dtResult.Rows)
+            {
+                Dictionary<string, string> dicContent = JsonToDictionary(dc["Content"]);
+                foreach (var item in dicContent)
+                {
+                    if (!lstAddColumn.Contains(item.Key))
+                    {
+                        lstAddColumn.Add(item.Key);
+                    }
+                }
+                dic.Add(dc, dicContent);
+            }
+
+            lstAddColumn.ForEach(p => dtResult.Columns.Add(p));
+
+            foreach (var item in dic)
+            {
+                foreach (var item1 in item.Value)
+                {
+                    if (lstAddColumn.Contains(item1.Key))
+                    {
+                        item.Key[item1.Key] = item1.Value;
+                    }
+                }
+            }
+
+            dtResult.Columns.Remove("BatchID");
+            dtResult.Columns.Remove("Content");
+
+
+            List<string> lstColumnName = new List<string>();
+            foreach (DataGridViewColumn dc in dgvResult.Columns)
+            {
+                lstColumnName.Add(dc.DataPropertyName);
+                lstColumnName.Add(dc.HeaderText);
+            }
+
+            foreach (DataColumn dc in dtResult.Columns)
+            {
+                if (lstColumnName.Contains(dc.ColumnName) || string.Equals(dc.ColumnName, "ID"))
+                {
+                    continue;
+                }
+                DataGridViewTextBoxColumn column = new DataGridViewTextBoxColumn();
+                column.DataPropertyName = dc.ColumnName;
+                column.HeaderText = dc.ColumnName;
+                column.Name = dc.ColumnName;
+                column.ReadOnly = true;
+                dgvResult.Columns.Add(column);
+                lstColumnName.Add(dc.ColumnName);
+            }
+        }
+
+        private Dictionary<string, string> JsonToDictionary(object obj)
+        {
+            if (obj == null || string.IsNullOrWhiteSpace(obj.ToString()))
+            {
+                return new Dictionary<string, string>();
+            }
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, string>>(obj.ToString());
         }
     }
 }

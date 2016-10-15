@@ -37,11 +37,13 @@
             this.txtHawbCode = new System.Windows.Forms.TextBox();
             this.lblMessage = new System.Windows.Forms.Label();
             this.dgvResult = new System.Windows.Forms.DataGridView();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.lblCountStr = new System.Windows.Forms.Label();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblCount = new System.Windows.Forms.Label();
-            this.lblCountStr = new System.Windows.Forms.Label();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             this.SuspendLayout();
@@ -127,9 +129,11 @@
             this.dgvResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.Column5});
             this.dgvResult.Location = new System.Drawing.Point(12, 280);
             this.dgvResult.Name = "dgvResult";
             this.dgvResult.ReadOnly = true;
@@ -137,29 +141,6 @@
             this.dgvResult.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvResult.Size = new System.Drawing.Size(1047, 246);
             this.dgvResult.TabIndex = 135;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "分运单号";
-            this.Column1.HeaderText = "分运单号";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 78;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "状态";
-            this.Column2.HeaderText = "状态";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 54;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "时间";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 54;
             // 
             // lblCount
             // 
@@ -179,6 +160,51 @@
             this.lblCountStr.Size = new System.Drawing.Size(185, 53);
             this.lblCountStr.TabIndex = 137;
             this.lblCountStr.Text = "运单号";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "BatchHawbCode";
+            this.Column4.Frozen = true;
+            this.Column4.HeaderText = "总单号";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 66;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "HawbCode";
+            this.Column1.Frozen = true;
+            this.Column1.HeaderText = "分运单号";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 78;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "OrderStatus";
+            this.Column2.Frozen = true;
+            this.Column2.HeaderText = "状态";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 54;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "ScanningTime";
+            this.Column3.Frozen = true;
+            this.Column3.HeaderText = "扫描时间";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 78;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "BatchCreateTime";
+            this.Column5.Frozen = true;
+            this.Column5.HeaderText = "导入时间";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 78;
             // 
             // frmMain
             // 
@@ -217,10 +243,12 @@
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.DataGridView dgvResult;
         private System.Windows.Forms.Label lblCount;
+        private System.Windows.Forms.Label lblCountStr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Label lblCountStr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
 
     }
 }

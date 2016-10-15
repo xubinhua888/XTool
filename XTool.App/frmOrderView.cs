@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using XTool.BLL;
+using XTool.File;
 
 namespace XTool.App
 {
@@ -53,7 +54,7 @@ namespace XTool.App
 
         private void SetDataSource()
         {
-            DataTable dtResult = OrderBLL.GetOrderItemList(order_id);
+            DataTable dtResult = OrderBLL.GetOrderItemList(order_id,0);
             AddColumn(dtResult);
             dgvResult.DataSource = dtResult;
         }
@@ -85,7 +86,7 @@ namespace XTool.App
             {
                 foreach (var item1 in item.Value)
                 {
-                    if(lstAddColumn.Contains(item1.Key))
+                    if (lstAddColumn.Contains(item1.Key))
                     {
                         item.Key[item1.Key] = item1.Value;
                     }
@@ -144,6 +145,86 @@ namespace XTool.App
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("总单号");
+            dt.Columns.Add("运单号");
+            dt.Columns.Add("清关类型");
+            dt.Columns.Add("件数");
+            dt.Columns.Add("是否查验");
+            dt.Columns.Add("入库时间");
+            dt.Columns.Add("状态");
+            dt.Columns.Add("导入时间");
+            dt.Columns.Add("到货时间");
+            
+            foreach (DataGridViewRow item in dgvResult.Rows)
+            {
+                DataRow row = dt.NewRow();
+                foreach (DataGridViewColumn column in dgvResult.Columns)
+                {
+                    string columnHeaderText = column.HeaderText.Trim();
+                    if (string.Equals(columnHeaderText, "总单号"))
+                    {
+                        row["总单号"] = item.Cells[column.Index].Value;
+                    }
+                    else if (string.Equals(columnHeaderText, "分运单号"))
+                    {
+                        row["运单号"] = item.Cells[column.Index].Value;
+                    }
+                    else if (string.Equals(columnHeaderText, "海关类别"))
+                    {
+                        row["清关类型"] = item.Cells[column.Index].Value + "类";
+                    }
+                    else if (string.Equals(columnHeaderText, "件数"))
+                    {
+                        row["件数"] = item.Cells[column.Index].Value;
+                    }
+                    else if (string.Equals(columnHeaderText, "扫描时间"))
+                    {
+                        row["到货时间"] = item.Cells[column.Index].Value;
+                        if (item.Cells[column.Index].Value == null || string.IsNullOrWhiteSpace(item.Cells[column.Index].Value.ToString()))
+                        {
+                            row["状态"] = "没信息";
+                        }
+                        else
+                        {
+                            row["状态"] = "到货";
+                        }
+                    }
+                    else if (string.Equals(columnHeaderText, "导入时间"))
+                    {
+                        row["导入时间"] = item.Cells[column.Index].Value;
+                    }
+                    else if (string.Equals(columnHeaderText, "状态"))
+                    {
+                        if (item.Cells[column.Index].Value == null || ! string.Equals(item.Cells[column.Index].Value.ToString(),"查验"))
+                        {
+                            row["是否查验"] = "不查验";
+                        }
+                        else
+                        {
+                            row["是否查验"] = "查验";
+                        }
+                    }
+                    else if (string.Equals(columnHeaderText, ""))
+                    {
+
+                    }
+                }
+                dt.Rows.Add(row);
+            }
+
+            SaveFileDialog objSaveFileDialog = new SaveFileDialog();
+            objSaveFileDialog.Filter = "Excel(*.xls)|*.xls";
+            objSaveFileDialog.FileName = DateTime.Now.ToString("yyyyMMddHHmmss") + ".xls";
+            if (objSaveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                ExcelHelper.TableToExcelForXLS(dt, objSaveFileDialog.FileName);
+                MessageBox.Show("导出成功!");
             }
         }
     }
